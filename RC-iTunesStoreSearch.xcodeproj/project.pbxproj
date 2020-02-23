@@ -119,9 +119,9 @@
 		5AB37AC4240280C70001C419 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5AB37ACA240280F50001C419 /* RCStoreSearchViewController.swift */,
 				5AB37AC8240280F50001C419 /* RCSearchResultsDataSource.swift */,
 				5AB37AC9240280F50001C419 /* RCSearchResultTableViewCell.swift */,
-				5AB37ACA240280F50001C419 /* RCStoreSearchViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

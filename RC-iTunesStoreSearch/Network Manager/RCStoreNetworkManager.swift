@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class RCStoreNetworkManager {
     
@@ -39,5 +40,22 @@ extension RCStoreNetworkManager {
         dataTask.resume()
     }
     
-    
+    func fetchImage(withURL url: URL, completionHandler: @escaping (ImageDownloadResult) -> Void) {
+        let downloadRequest = URLRequest(url: url)
+        let downloadTask = session.downloadTask(with: downloadRequest) { (url, response, error) in
+            
+            print("HTTP response Code: \(String(describing: (response as? HTTPURLResponse)?.statusCode))")
+            print("URL Header Fields: \(String(describing: (response as? HTTPURLResponse)?.allHeaderFields))")
+
+            guard error == nil else {
+                completionHandler(.Failure(iTunesError.ImageDownloadError))
+                return
+            }
+            if let downloadURL = url, let data = try? Data(contentsOf: downloadURL), let image = UIImage(data: data) {
+                completionHandler(.Success(image))
+            }
+
+        }
+        downloadTask.resume()
+    }
 }

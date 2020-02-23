@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum iTunesSearchMethod: String {
     case search = "/search"
@@ -17,8 +18,14 @@ enum SearchResult {
     case Failure(Error)
 }
 
+enum ImageDownloadResult {
+    case Success(UIImage)
+    case Failure(Error)
+}
+
 enum iTunesError: Error {
     case InvalidJSONData // Invalid Json error for iTunes Search API call
+    case ImageDownloadError
 }
 
 struct RCiTunesAPI {

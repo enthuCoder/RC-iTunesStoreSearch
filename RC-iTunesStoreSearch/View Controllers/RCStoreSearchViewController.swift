@@ -41,6 +41,10 @@ class RCStoreSearchViewController: UIViewController {
         // Setup Delegates and Datasources
         searchBar.delegate = self
         tableView.dataSource = resultsTableViewDataSource
+        tableView.delegate = self
+        
+        navigationItem.titleView?.tintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 0.5)
+        
     }
     
 }
@@ -107,5 +111,27 @@ extension RCStoreSearchViewController {
     
     @IBAction func chosenCategoryChanged(_ sender: UISegmentedControl) {
         performSearch(for: searchBar.text)
+    }
+}
+
+extension RCStoreSearchViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        let item = resultsTableViewDataSource.searchResults[indexPath.row]
+        if let smallImageURL = URL(string: item.imageSmall) {
+            print("Fetching image from: \(item.imageSmall)")
+            storeManager.fetchImage(withURL: smallImageURL) { (result) in
+                switch result {
+                    case let .Success(image):
+                        print("Downloaded Image")
+                        DispatchQueue.main.async {
+                            (cell as! RCSearchResultTableViewCell).artworkImageView.image = image
+                        }
+                    case let .Failure(error):
+                        print("Image download failed with error: \(error)")
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0E6FBE5F-24E7-4F71-9C01-8FD4B2C480AB"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3DB260C-4011-4D26-A418-0A0B717998D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RC-iTunesStoreSearch/View Controllers/RCStoreSearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "tableView(_:willDisplay:forRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D3DB260C-4011-4D26-A418-0A0B717998D5 - 71e73ebddb250a65"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RC_iTunesStoreSearch.ImageDownloadResult) -&gt; () in RC_iTunesStoreSearch.RCStoreSearchViewController.tableView(_: __C.UITableView, willDisplay: __C.UITableViewCell, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "RC-iTunesStoreSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dilgir.as/Documents/2019/Development/RetroCoder%20Git%20Samples/RC-iTunesStoreSearch/RC-iTunesStoreSearch/View%20Controllers/RCStoreSearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "D3DB260C-4011-4D26-A418-0A0B717998D5 - 71e73ebddb250a65"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RC_iTunesStoreSearch.ImageDownloadResult) -&gt; () in RC_iTunesStoreSearch.RCStoreSearchViewController.tableView(_: __C.UITableView, willDisplay: __C.UITableViewCell, forRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "RC-iTunesStoreSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dilgir.as/Documents/2019/Development/RetroCoder%20Git%20Samples/RC-iTunesStoreSearch/RC-iTunesStoreSearch/View%20Controllers/RCStoreSearchViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "195">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7280B80-3ED8-488D-AF3F-443254EC52B9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RC-iTunesStoreSearch/Network Manager/RCStoreNetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "fetchImage(withURL:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "369871DA-CDD9-46B9-930C-A313AE4BF386"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RC-iTunesStoreSearch/Network Manager/RCStoreNetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "fetchImage(withURL:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

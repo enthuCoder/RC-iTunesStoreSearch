@@ -21,10 +21,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Setup Initial View Controller
         let rootViewController = window?.rootViewController as! UINavigationController
+        rootViewController.navigationBar.barTintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 0.5)
         let storeSearchView = rootViewController.topViewController as! RCStoreSearchViewController
         
         // Inject Network layer Dependency on Landing UI View
         storeSearchView.storeManager = RCStoreNetworkManager()
+        
+        // Give a greenish tint
+        customizeAppreance()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -53,6 +57,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+
+    func customizeAppreance() {
+        let barTintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 0.5)
+        UISearchBar.appearance(whenContainedInInstancesOf: [UIViewController.classForCoder() as! UIAppearanceContainer.Type]).barTintColor = barTintColor
+        
+        window?.tintColor = UIColor(red: 10/255, green: 80/255, blue: 80/255, alpha: 1) // Changes search bar cursor color
     }
 
 
